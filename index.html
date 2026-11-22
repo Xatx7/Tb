@@ -342,7 +342,7 @@ const CONFIG = {
 function esc(s){ return String(s ?? '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 function getUrl(){
-  return 'https://link3.cc/xatx6?from=share&inv=' + encodeURIComponent(CONFIG.invCode);
+  return 'https://tbmt20.netlify.app?from=share&inv=' + encodeURIComponent(CONFIG.invCode);
 }
 document.getElementById('showUrl').textContent = getUrl().replace(/^https?:\/\//, '');
 
@@ -425,6 +425,25 @@ function fbCode(text,done){
   document.body.removeChild(i);
 }
 
+/* ===== 新增：美团卡片整卡复制 ===== */
+function copyMtCodeCard(el){
+  const code = CONFIG.mtCode;
+  const done = () => {
+	showTip('✅ 口令已复制，打开美团 App 即可领取');
+	vibrate([40]);
+	// 卡片绿色遮罩
+	const overlay = document.createElement('div');
+	overlay.style.cssText = 'position:absolute;inset:0;background:rgba(82,196,26,0.92);border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:17px;z-index:10;animation:fade-in .2s';
+	overlay.innerHTML = '✅ 已复制';
+	el.appendChild(overlay);
+	setTimeout(() => { if (overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 2000);
+	track('copy_mtcode_card');
+  };
+  if (navigator.clipboard && location.protocol === 'https:') {
+	navigator.clipboard.writeText(code).then(done).catch(() => fbCode(code,done));
+  } else { fbCode(code,done); }
+}
+
 /* =========================================================
    统计
    ========================================================= */
@@ -475,8 +494,8 @@ const DATA = [
   { section:'🟠 外卖红包', brand:'#FF6A00', items:[
 	{ text:'淘宝闪购大红包', sub:'官方入口 · 天天可领', icon:'🛒', cls:'b-tb',
 	  url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=9249&slk_force_set_request=true&scene=79c3e86933ac4ac6bc1fba486c241ddb', hot:'🔥最热' },
-	{ text:'美团外卖大红包', sub:'官方入口 · 天天可领', icon:'🍔', cls:'b-mt',
-	  url:'', hasCode:true },
+	{ text:'美团外卖大红包', sub:'点击复制口令，打开美团领取', icon:'🍔', cls:'b-mt',
+	  url:'', copyOnly: true },
 	{ text:'淘宝闪购夜宵专享会场', sub:'夜宵党专属', icon:'🥡', cls:'b-ele',
 	  url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8706&slk_force_set_request=true&alsc_exsrc=ES0007485972&scene=a322445b6f6f4252915b185ded0810d7' },
 	{ text:'淘宝叠加神券',   sub:'可与红包同用', icon:'🧧', cls:'b-tb',
@@ -512,10 +531,16 @@ DATA.forEach(d => {
 	  + '<div class="section-line"></div></div>';
 	d.items.forEach(i => {
 	  const badge = i.hot ? '<span class="badge-hot">' + i.hot + '</span>' : '';
-	  const codeBtn = i.hasCode
-		? '<button class="cps-code" onclick="copyMtCode(this)">🔑 复制口令</button>'
-		: '';
-	  h += '<a class="cps-btn ' + i.cls + '" href="' + esc(i.url) + '" onclick="event.preventDefault();go(this,\'' + esc(i.url) + '\',\'' + esc(i.text) + '\')">'
+	  let codeBtn = '';
+	  let onclickAttr = 'event.preventDefault();go(this,\'' + esc(i.url) + '\',\'' + esc(i.text) + '\')';
+	  let hrefAttr = esc(i.url) || 'javascript:void(0)';
+	  if (i.copyOnly) {
+		onclickAttr = 'event.preventDefault();copyMtCodeCard(this)';
+		hrefAttr = 'javascript:void(0)';
+	  } else if (i.hasCode) {
+		codeBtn = '<button class="cps-code" onclick="event.stopPropagation();copyMtCode(this)">🔑 复制口令</button>';
+	  }
+	  h += '<a class="cps-btn ' + i.cls + '" href="' + hrefAttr + '" onclick="' + onclickAttr + '">'
 		+ '<div class="cps-l"><div class="cps-icon">' + i.icon + '</div>'
 		+ '<div class="cps-text">' + i.text + '<small>' + i.sub + '</small></div></div>'
 		+ '<div class="cps-right">' + badge + codeBtn + '<div class="cps-arr">›</div></div>'
