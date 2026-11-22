@@ -474,27 +474,27 @@ window.addEventListener('scroll', () => {
 const DATA = [
   { section:'🟠 外卖红包', brand:'#FF6A00', items:[
 	{ text:'淘宝闪购大红包', sub:'官方入口 · 天天可领', icon:'🛒', cls:'b-tb',
-	  URL:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=9249&slk_force_set_request=true&scene=79c3e86933ac4ac6bc1fba486c241ddb', 热的:'🔥最热' },
-	{ 文本:'美团外卖大红包', 潜水艇:'官方入口 · 天天可领', 图标:'🍔', CLS:'b-mt',
-	  URL:'', hascode:true },
-	{ 文本:'淘宝闪购夜宵专享会场', 潜水艇:'夜宵党专属', 图标:'🥡', CLS:'b-ele',
-	  网址:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8706&slk_force_set_request=true&alsc_exsrc=ES0007485972&scene=a322445b6f6f4252915b185ded0810d7' },
-	{ 文本:'淘宝叠加神券',   潜水艇:'可与红包同用', 图标:'🧧', CLS:'b-tb',
-	  网址:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8339&slk_force_set_request=true&tfPos=h5&alsc_exsrc=ES0007076172&scene=bb92343302724bb097cf7aac62123654' },
-	{ 文本:'美团外卖大额券', 潜水艇:'满减通用 · 秒到账', 图标:'🎫', CLS:'b-mtr',
-	  网址:'http://dpurl.cn/6a8iTsmz' },
+	  url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=9249&slk_force_set_request=true&scene=79c3e86933ac4ac6bc1fba486c241ddb', hot:'🔥最热' },
+	{ text:'美团外卖大红包', sub:'官方入口 · 天天可领', icon:'🍔', cls:'b-mt',
+	  url:'', hasCode:true },
+	{ text:'淘宝闪购夜宵专享会场', sub:'夜宵党专属', icon:'🥡', cls:'b-ele',
+	  url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8706&slk_force_set_request=true&alsc_exsrc=ES0007485972&scene=a322445b6f6f4252915b185ded0810d7' },
+	{ text:'淘宝叠加神券',   sub:'可与红包同用', icon:'🧧', cls:'b-tb',
+	  url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8339&slk_force_set_request=true&tfPos=h5&alsc_exsrc=ES0007076172&scene=bb92343302724bb097cf7aac62123654' },
+	{ text:'美团外卖大额券', sub:'满减通用 · 秒到账', icon:'🎫', cls:'b-mtr',
+	  url:'http://dpurl.cn/6a8iTsmz' },
   ]},
-  { section:'🏨 到店优惠', 品牌:'#FA541C', items:[
-	{ 文本:'酒店集合页', 潜水艇:'订房立减 · 新客更优惠', 图标:'🏨', CLS:'b-hotel', 网址:CONFIG.hotelUrl },
-	{ 文本:'美团闪购集合页', 潜水艇:'超市生鲜红包 · 即时送达', 图标:'⚡', CLS:'b-flash', 网址:CONFIG.flashUrl },
+  { section:'🏨 到店优惠', brand:'#FA541C', items:[
+	{ text:'酒店集合页', sub:'订房立减 · 新客更优惠', icon:'🏨', cls:'b-hotel', url:CONFIG.hotelUrl },
+	{ text:'美团闪购集合页', sub:'超市生鲜红包 · 即时送达', icon:'⚡', cls:'b-flash', url:CONFIG.flashUrl },
   ]},
-  { 部分:'🎬 电影特价', 品牌:'#722ED1', 项目:[
-	{ 文本:'电影特价票', 潜水艇:'周二周三半价 · 提前买更便宜', 图标:'🎬', CLS:'b-my', 网址:CONFIG.movieUrl },
+  { section:'🎬 电影特价', brand:'#722ED1', items:[
+	{ text:'电影特价票', sub:'周二周三半价 · 提前买更便宜', icon:'🎬', cls:'b-my', url:CONFIG.movieUrl },
   ]},
-  { 部分:'🚗 打车立减', 品牌:'#13C2C2', 项目:[
-	{ 文本:'打车集合页', 潜水艇:'聚合补贴 · 通勤天天能用', 图标:'🚕', CLS:'b-dd', 网址:CONFIG.taxiUrl },
+  { section:'🚗 打车立减', brand:'#13C2C2', items:[
+	{ text:'打车集合页', sub:'聚合补贴 · 通勤天天能用', icon:'🚕', cls:'b-dd', url:CONFIG.taxiUrl },
   ]},
-  { 提示:[
+  { tips:[
 	'💡 <b>外卖</b>：下单前先在本站领券，平台券 + 商家满减 + 支付优惠可同时享受。',
 	'🎬 <b>电影票</b>：周二、周三多为半价日，提前1小时买更便宜。',
 	'🚗 <b>打车</b>：高峰前领券，周末平台补贴力度更大。',
@@ -502,20 +502,20 @@ const DATA = [
   ]},
 ];
 
-让h='';
-DATA.foreach(d => {
-  如果 (d。section) {
-H+='<div class="section" style="--brand:' + d.品牌 + '">'
-	  + "我们需要一个新的世界.
-	  + '<div class="section-dot"style="background：' + d.品牌 + ';color:' + d.品牌 + '"></div>'
-	  + '<div class="section-name">'+d.部分 + '</div>'
+let h = '';
+DATA.forEach(d => {
+  if (d.section) {
+	h += '<div class="section" style="--brand:' + d.brand + '">'
+	  + '<div class="section-title">'
+	  + '<div class="section-dot" style="background:' + d.brand + ';color:' + d.brand + '"></div>'
+	  + '<div class="section-name">' + d.section + '</div>'
 	  + '<div class="section-line"></div></div>';
-d。项目.foreach(我 => {
-Const徽章=i.热的 ? /超文本标记语言>'<span class="badge-hot">'+i.热的 + '</span>' : '';
-	  Const codeBtn = i.hascode
-		? '<按钮class="cps-code"onclick="copyMtCode(this)">🔑 复制口令</button>'
+	d.items.forEach(i => {
+	  const badge = i.hot ? '<span class="badge-hot">' + i.hot + '</span>' : '';
+	  const codeBtn = i.hasCode
+		? '<button class="cps-code" onclick="copyMtCode(this)">🔑 复制口令</button>'
 		: '';
-H+='<a class="cps-btn'+i.CLS + '"href="' + ESC(我。URL) + '"onclick="event.preventDefault()；go(this，\'' + ESC(我。URL) + '\',\'' + ESC(我。文本) + '\')">'
+	  h += '<a class="cps-btn'+i.CLS + '"href="' + ESC(我。URL) + '"onclick="event.preventDefault()；go(this，\'' + ESC(我。URL) + '\',\'' + ESC(我。文本) + '\')">''<a class="cps-btn'+i.CLS + '"href="' + ESC(我。URL) + '"onclick="event.preventDefault()；go(this，\'' + ESC(我。URL) + '\',\'' + ESC(我。文本) + '\')">'
 		+ '<div class="cps-l"><div class="cps-icon">'+i.图标 + '</div>'
 		+ '<div class="cps-text">'+i.文本 + '<small>'+i.潜水艇 + '</small></div></div>'
 		+ '<div class="cps-right">'+徽章+代码Btn+'<div class="cps-arr">›</div></div>'
@@ -528,4 +528,4 @@ H+='</div>';
 文件。getElementById('页面').innerHTML=h；
 </脚本>
 </身体>
-</超文本标记语言>/超文本标记语言>/超文本标记语言>/超文本标记语言>/超文本标记语言>/超文本标记语言>/超文本标记语言>/超文本标记语言>
+</超文本标记语言>
