@@ -1,241 +1,241 @@
-<！doctype 超文本标记语言>
-<超文本标记语言 朗="zh-CN">
-<头>
-<元 字符集="UTF-8">
-<元 姓名="视口" 内容="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<元 姓名="主题-颜色" 内容="#2b0d00">
-<标题>神券阁 · 外卖福利中心</标题>
-<风格>
-*{箱体尺寸:边框框;边缘:0;填充:0;-webkit-tap-highlight-color:transparent}
-:根{
-  --bg:#FFF8F0; --text:#3A1F00; --sub:#A0764A; --card：#fff；
-  --line:RGBA(0,0,0,.06); --sh:RGBA(120,60,0,.08);
-  --float:RGBA(255,255,255,.95); --品牌:#FF7A00; --red:#E8452A;
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#2b0d00">
+<title>神券阁 · 外卖福利中心</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#FFF8F0; --text:#3A1F00; --sub:#A0764A; --card:#fff;
+  --line:rgba(0,0,0,.06); --sh:rgba(120,60,0,.08);
+  --float:rgba(255,255,255,.95); --brand:#FF7A00; --red:#E8452A;
 }
-@介质(首选颜色方案：黑暗的){
-：根{--bg：#120802；--text：#FFE6C4；--sub：#C79560；--CARD：#201103；--line:RGBA(255，140，0，.1)；--sh:RGBA(0，0，0，.45)；--float:RGBA(20，10，3，.96)}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#120802;--text:#FFE6C4;--sub:#C79560;--card:#201103;--line:rgba(255,140,0,.1);--sh:rgba(0,0,0,.45);--float:rgba(20,10,3,.96)}
 }
-超文本标记语言{scroll-behavior:smooth}
-body{背景：var(--bg)；颜色：var(--text)；font-family：-apple-system，BlinkMacSystemFont，"pingfang SC"，"Helvetica neue"，Arial，无衬线；padding-bottom:90px；最小高度：100vh；溢出x：隐藏；-webkit-font-moothing：抗锯齿}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;padding-bottom:90px;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
 /* ===== 头部：深棕 + 橙红光晕 ===== */
-.英雄{
-  位置:relative;填充:34px 16px 22px;
-  背景:
-径向梯度(200px170px，50%-6%，美国(255，150，40，.45)，透明65%)，
-径向梯度(260px200px，15%-30%，美国(255，110，20，.22)，透明68%)，
-径向梯度(240px200px at88%20%，美国(255，90，0，.20)，透明66%)，
-线性梯度(180deg,#1204000%，#380F0145%，#8A3202100%)；
-边界半径:0 0 28px 28px; 溢出: 隐藏
+.hero{
+  position:relative;padding:34px 16px 22px;
+  background:
+	radial-gradient(200px 170px at 50% 6%,rgba(255,150,40,.45),transparent 65%),
+	radial-gradient(260px 200px at 15% 30%,rgba(255,110,20,.22),transparent 68%),
+	radial-gradient(240px 200px at 88% 20%,rgba(255,90,0,.20),transparent 66%),
+	linear-gradient(180deg,#120400 0%,#380F01 45%,#8A3202 100%);
+  border-radius:0 0 28px 28px;overflow:hidden;
 }
-.英雄::在……之后{内容:'';位置:绝对的;left:0;正确的:0;bottom:0;高度:3px;背景:线性梯度(90deg,transparent,美国(255,210,100,.55),美国(255,180,50,.85),美国(255,210,100,.55),transparent)}
-.英雄内心{位置:相对的;z-index:2;text-align:中心;动画:向下 .5s cubic-bezier(.4,0,.2,1)}
-@keyframes向下{从……起{改变：translateY(-14px)；不透明度：0}到{改变：translatey(0)；不透明度：1}}
-.标志{字体大小:36px;边缘底部:8px;筛选:下影(0 4px 16px 美国(255,150,50,.75));动画:摇摆 4.5s ease-in-out 无限的;transform-origin:50% 20%}
-@keyframes 摇摆{0%,100%{改变:旋转(-4deg)}50%{改变:旋转(4deg)}}
-@介质(preferres-reduce-motion:减少){.标志{动画:无}}
-.hero h1{字体大小：26px；字体粗细：900；脸色：#fff；字母间距：12px；text-indent:12px；边缘底部：8px；text-shadow:03px 20px美国(255，120，0，.65)}
-.hero h1 span{背景:线性梯度(180deg，#FFF3CE，#FFB84D);-webkit-background-clip:文本;background-clip:文本;颜色:transparent}
-.hero p{字体大小:12px;颜色:美国(255,255,255,.55);边缘底部:14px;字母间距:2px}
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,rgba(255,210,100,.55),rgba(255,180,50,.85),rgba(255,210,100,.55),transparent)}
+.hero-inner{position:relative;z-index:2;text-align:center;animation:down .5s cubic-bezier(.4,0,.2,1)}
+@keyframes down{from{transform:translateY(-14px);opacity:0}to{transform:translateY(0);opacity:1}}
+.logo{font-size:36px;margin-bottom:8px;filter:drop-shadow(0 4px 16px rgba(255,150,50,.75));animation:swing 4.5s ease-in-out infinite;transform-origin:50% 20%}
+@keyframes swing{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@media(prefers-reduced-motion:reduce){.logo{animation:none}}
+.hero h1{font-size:26px;font-weight:900;color:#fff;letter-spacing:12px;text-indent:12px;margin-bottom:8px;text-shadow:0 3px 20px rgba(255,120,0,.65)}
+.hero h1 span{background:linear-gradient(180deg,#FFF3CE,#FFB84D);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:14px;letter-spacing:2px}
 
-.benefit-wrap{min-height:24px;边缘底部:12px}
-.benefit-text{display:inline-flex;align-items:中心;差距:6px;字体大小:12.5px;颜色:#5A2A00;字体粗细:800;填充:7px 16px;border-radius:99px;背景:线性梯度(135deg，#FFE7A8，#FFC24D);border:1px solid 美国(255,255,255,.65);箱形阴影:0 3px 14px 美国(255,150,0,.35);过渡:不透明度 .25s}
-.连杆{display:inline-flex；align-items：中心；差距：6px；背景：美国(255，255，255，.1)；背景滤镜：模糊(12px)；-webkit-backdrop-filter：模糊(12px)；边框：1px固体美国(255，215，110，.28)；border-radius:10px；填充：5px6px；max-width:270px；text-align:left}
-.link-bar-url{flex:1；字体大小：11px；颜色：美国(255，255，255，.85)；font-family：'SF mono'，Menlo，等宽；溢出：隐藏；文本溢出：省略号；空白：noWrap}
-.link-bar-btn{flex-shrink:0；填充：4px10px；边框：无；边界半径：8px；背景：线性梯度(135deg，#FFE15A，#FFA300)；颜色：#4A1A00；字体大小：11px；字体粗细：900；光标：指针}
-.link-bar-btn.完成{背景:线性梯度(135deg,#6FE08A,#2FA64A);颜色：#fff}
+.benefit-wrap{min-height:24px;margin-bottom:12px}
+.benefit-text{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#5A2A00;font-weight:800;padding:7px 16px;border-radius:99px;background:linear-gradient(135deg,#FFE7A8,#FFC24D);border:1px solid rgba(255,255,255,.65);box-shadow:0 3px 14px rgba(255,150,0,.35);transition:opacity .25s}
+.link-bar{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,215,110,.28);border-radius:10px;padding:5px 6px;max-width:270px;text-align:left}
+.link-bar-url{flex:1;font-size:11px;color:rgba(255,255,255,.85);font-family:'SF Mono',Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.link-bar-btn{flex-shrink:0;padding:4px 10px;border:none;border-radius:8px;background:linear-gradient(135deg,#FFE15A,#FFA300);color:#4A1A00;font-size:11px;font-weight:900;cursor:pointer}
+.link-bar-btn.done{background:linear-gradient(135deg,#6FE08A,#2FA64A);color:#fff}
 
-.tip-bar{边缘:14px 14px 6px;border-radius:14px;填充:11px 14px;背景:线性梯度(135deg，#FFF0D4，#FFDCA8);border:1px dashed 美国(220,110,0,.38);字体大小:12.5px;颜色:#C24E00;字体粗细:800;display:flex;align-items:center;gap:6px;箱形阴影:0 2px 8px var(--sh)}
+.tip-bar{margin:14px 14px 6px;border-radius:14px;padding:11px 14px;background:linear-gradient(135deg,#FFF0D4,#FFDCA8);border:1px dashed rgba(220,110,0,.38);font-size:12.5px;color:#C24E00;font-weight:800;display:flex;align-items:center;gap:6px;box-shadow:0 2px 8px var(--sh)}
 
 /* ===== 内容 ===== */
-.页面{填充:0 14px}
+.page{padding:0 14px}
 .section{margin-top:18px}
-.章节标题{display:flex;align-items:center;gap:8px;边缘底部:10px}
-.剖面点{width:10px;高度:10px;border-radius:50%;flex-shrink:0;背景:var(--red)!important;箱形阴影:0 0 10px 美国(232,69,42,.6)}
-.剖面点 我{显示:屏蔽;width:100%;高度:100%;border-radius:50%;背景:var(--品牌)}
-.节名称{字体大小:15.5px;字体粗细:900;字母间距:.5px}
-.剖面线{弯曲:1;高度:1.5px;背景:线性梯度(90deg,var(--品牌),transparent);不透明度:.28;border-radius:2px}
+.section-title{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.section-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;background:var(--red)!important;box-shadow:0 0 10px rgba(232,69,42,.6)}
+.section-dot i{display:block;width:100%;height:100%;border-radius:50%;background:var(--brand)}
+.section-name{font-size:15.5px;font-weight:900;letter-spacing:.5px}
+.section-line{flex:1;height:1.5px;background:linear-gradient(90deg,var(--brand),transparent);opacity:.28;border-radius:2px}
 
 /* ===== 卡片 ===== */
-.cps-btn{显示:弯曲;对齐项目:中心;justify-content:space-between;border-radius:14px;填充:10px 12px;边缘底部:9px;text-decoration:无;颜色：#fff；字体大小:14px;字体粗细:800;位置:relative;overflow:hidden;cursor:pointer;箱形阴影:0 4px 14px 美国(90,40,0,.14),inset 0 1px 0 美国(255,255,255,.22);border:1px solid 美国(255,255,255,.14);过渡:改变 .2s cubic-bezier(.4,0,.2,1),箱形阴影 .2s}
-.cps-btn:盘旋{改变:translateY(-3px);箱形阴影:0 10px 24px 美国(90,40,0,.2)}
-.cps-btn:活跃的{改变:translateY(0) 规模(.98)}
-.cps-btn::在……之前{内容:'';位置:绝对的;顶端:0;left:0;正确的:0;高度:50%;背景:线性梯度(180deg,美国(255,255,255,.2),transparent);border-radius:14px 14px 0 0;指针事件:无}
-.cps-btn::在……之后{内容:'';位置:绝对的;顶端:0;left:-120%;width:50%;高度:100%;背景:线性梯度(90deg,transparent,美国(255,255,255,.28),transparent);改变:skewX(-22deg);动画:打扫 5s 无限的;指针事件:无}
-@keyframes 打扫{0%,60%{left:-120%}100%{left:220%}}
-@介质(preferres-reduce-motion:减少){.cps-btn::在……之后{显示:无}}
-.cps-l{显示:弯曲;对齐项目:中心;差距:10px;位置:relative;z-index:1;最小宽度:0}
-.cps-icon{width:36px;高度:36px;border-radius:11px;flex-shrink:0;显示:弯曲;对齐项目:中心;justify-content:中心;字体大小:17px;背景:美国(255,255,255,.22);箱形阴影:inset 0 1px 2px 美国(255,255,255,.3),0 2px 8px 美国(0,0,0,.12)}
-.cps-文本{显示:弯曲;挠曲方向:柱;线高度:1.35;最小宽度:0}
-.cps-文本 小的{字体大小:10.5px;字体粗细:700;不透明度:.82;margin-top:2px}
-.cps-右{显示:弯曲;对齐项目:中心;差距:6px;位置:relative;z-index:1;flex-shrink:0}
-.徽章热{字体大小:9.5px;字体粗细:900;填充:2px 7px;border-radius:99px;背景:线性梯度(135deg,#FF4D4F,#C81E1E);颜色：#fff；box-shadow:0 2px 6px 美国(200,30,30,.35);动画:热的 1.8s ease-in-out 无限的}
-@keyframes 热的{0%,100%{改变:规模(1)}50%{改变:规模(1.08)}}
-@介质(preferres-reduce-motion:减少){.徽章热{动画:无}}
-.cps-arr{字体大小:18px;不透明度:.5;过渡:改变 .2s,不透明度 .2s;width:26px;高度:26px;border-radius:50%;显示:弯曲;对齐项目:中心;justify-content:中心}
-.cps-btn:盘旋 .cps-arr{改变:translateX(3px);不透明度:.85}
-.cps-btn.开始 .cps-arr{动画:旋转 .6s 线性 无限的;不透明度:.9}
-@keyframes 旋转{到{改变:旋转(360deg)}}
-.cps-btn.复印卡 .cps-dot{位置:绝对的;正确的:44px;顶端:50%;width:8px;height:8px;border-radius:50%;背景:#7DF0A0;改变:translateY(-50%);动画:脉冲 2s infinite;z-index:2}
-@keyframes 脉冲{0%,100%{箱形阴影:0 0 0 0 美国(120,240,160,.7)}50%{箱形阴影:0 0 0 8px 美国(120,240,160,0)}}
+.cps-btn{display:flex;align-items:center;justify-content:space-between;border-radius:14px;padding:10px 12px;margin-bottom:9px;text-decoration:none;color:#fff;font-size:14px;font-weight:800;position:relative;overflow:hidden;cursor:pointer;box-shadow:0 4px 14px rgba(90,40,0,.14),inset 0 1px 0 rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.14);transition:transform .2s cubic-bezier(.4,0,.2,1),box-shadow .2s}
+.cps-btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(90,40,0,.2)}
+.cps-btn:active{transform:translateY(0) scale(.98)}
+.cps-btn::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,.2),transparent);border-radius:14px 14px 0 0;pointer-events:none}
+.cps-btn::after{content:'';position:absolute;top:0;left:-120%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-22deg);animation:sweep 5s infinite;pointer-events:none}
+@keyframes sweep{0%,60%{left:-120%}100%{left:220%}}
+@media(prefers-reduced-motion:reduce){.cps-btn::after{display:none}}
+.cps-l{display:flex;align-items:center;gap:10px;position:relative;z-index:1;min-width:0}
+.cps-icon{width:36px;height:36px;border-radius:11px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17px;background:rgba(255,255,255,.22);box-shadow:inset 0 1px 2px rgba(255,255,255,.3),0 2px 8px rgba(0,0,0,.12)}
+.cps-text{display:flex;flex-direction:column;line-height:1.35;min-width:0}
+.cps-text small{font-size:10.5px;font-weight:700;opacity:.82;margin-top:2px}
+.cps-right{display:flex;align-items:center;gap:6px;position:relative;z-index:1;flex-shrink:0}
+.badge-hot{font-size:9.5px;font-weight:900;padding:2px 7px;border-radius:99px;background:linear-gradient(135deg,#FF4D4F,#C81E1E);color:#fff;box-shadow:0 2px 6px rgba(200,30,30,.35);animation:hot 1.8s ease-in-out infinite}
+@keyframes hot{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@media(prefers-reduced-motion:reduce){.badge-hot{animation:none}}
+.cps-arr{font-size:18px;opacity:.5;transition:transform .2s,opacity .2s;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cps-btn:hover .cps-arr{transform:translateX(3px);opacity:.85}
+.cps-btn.opening .cps-arr{animation:spin .6s linear infinite;opacity:.9}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cps-btn.copy-card .cps-dot{position:absolute;right:44px;top:50%;width:8px;height:8px;border-radius:50%;background:#7DF0A0;transform:translateY(-50%);animation:pulse 2s infinite;z-index:2}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(120,240,160,.7)}50%{box-shadow:0 0 0 8px rgba(120,240,160,0)}}
 
 /* 口令卡：黄橙金 */
-.b-mt,.b-tb-copy{背景:线性梯度(135deg，#FFDE5C0%，#FFB40048%,#F29100100%)!important;颜色:#432200!important;border-color:美国(255,255,255,.45)!important}
-.b-mt .cps-icon,.b-tb-copy .cps-icon{background:RGBA(255,255,255,.68)!important;box-shadow:inset 0 1px 2px没有任何的0 2px 8px RGBA(160,90,0,.15)!important}
-.b-mt .cps-text 小的,.b-tb-copy .cps-text small{颜色:RGBA(67,34,0,.72)!important}
-.其他 .美国,.没有任何的 .美国{背景:线性梯度(135deg,#5FD97A,#279E3F)!important;颜色：#fff!important;不透明度:1!important;box-shadow:0 2px 8px 美国(39,158,63,.4);字体大小:15px}
-.其他 .徽章热,.没有任何的 .徽章热{背景:线性梯度(135deg,#FF6B6B,#D62C2C)}
+.b-mt,.b-tb-copy{background:linear-gradient(135deg,#FFDE5C 0%,#FFB400 48%,#F29100 100%)!important;color:#432200!important;border-color:rgba(255,255,255,.45)!important}
+.b-mt .cps-icon,.b-tb-copy .cps-icon{background:rgba(255,255,255,.68)!important;box-shadow:inset 0 1px 2px #fff,0 2px 8px rgba(160,90,0,.15)!important}
+.b-mt .cps-text small,.b-tb-copy .cps-text small{color:rgba(67,34,0,.72)!important}
+.b-mt .cps-arr,.b-tb-copy .cps-arr{background:linear-gradient(135deg,#5FD97A,#279E3F)!important;color:#fff!important;opacity:1!important;box-shadow:0 2px 8px rgba(39,158,63,.4);font-size:15px}
+.b-mt .badge-hot,.b-tb-copy .badge-hot{background:linear-gradient(135deg,#FF6B6B,#D62C2C)}
 
-.其他   {背景:线性梯度(135deg现在我们要做的是)}
-.其他  {背景:线性梯度(135deg,#FF8A5E,#D84315)}
-.没有  {背景:线性梯度(135deg,#4FB0FF,#0D6FE8)}
-.b-dp   {背景:线性梯度(135deg,#FF8360,#E53925)}
-.没有   {背景:线性梯度(135deg,#FF7AA0,#D81B60)}
-.旅馆{背景:线性梯度(135deg，#FFB072，#E8590C)}
-.闪电{背景:线性梯度(135deg现在我们要做的是);颜色:#432200}
-.闪电 .没有任何的{背景:美国(255,255,255,.55)}
-.其他   {背景:线性梯度(135deg现在,我们要做些什么呢?)}
+.b-tb   {background:linear-gradient(135deg,#FFA63D,#E8500A)}
+.b-mtr  {background:linear-gradient(135deg,#FF8A5E,#D84315)}
+.b-ele  {background:linear-gradient(135deg,#4FB0FF,#0D6FE8)}
+.b-dp   {background:linear-gradient(135deg,#FF8360,#E53925)}
+.b-my   {background:linear-gradient(135deg,#FF7AA0,#D81B60)}
+.b-hotel{background:linear-gradient(135deg,#FFB072,#E8590C)}
+.b-flash{background:linear-gradient(135deg,#FFDD55,#F0A000);color:#432200}
+.b-flash .cps-icon{background:rgba(255,255,255,.55)}
+.b-dd   {background:linear-gradient(135deg,#FFA07A,#F04E1F)}
 
 /* ===== 信息卡 ===== */
-.注意{margin-top:14px;背景:var(--card);border-radius:14px;填充:12px 14px;border:1px solid var(--line);border-left:4px solid var(--品牌);box-shadow:0 3px 12px var(--sh)}
-.通知标题{字体大小:13PX;字体粗细:900;边缘底部:6PX;display:flex;align-items:center;gap:6PX}
-.注意 没有{列表式:无}
-.注意 li{字体大小:12PX;颜色:var(--sub);线高度:1.8;padding-left:16PX;位置:relative}
-.注意 li::在……之前{内容:'✦';位置:绝对的;left:0;颜色:var(--品牌);字体大小:9PX;顶端:4PX}
-.注意 li b{颜色:var(--text)}
+.notice{margin-top:14px;background:var(--card);border-radius:14px;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--brand);box-shadow:0 3px 12px var(--sh)}
+.notice-title{font-size:13px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.notice ul{list-style:none}
+.notice li{font-size:12px;color:var(--sub);line-height:1.8;padding-left:16px;position:relative}
+.notice li::before{content:'✦';position:absolute;left:0;color:var(--brand);font-size:9px;top:4px}
+.notice li b{color:var(--text)}
 
 /* ===== 底部 ===== */
-.float-bar{位置:已修复;bottom:0;left:0;正确的:0;z-index:100;background:var(--float);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);填充:10px 14px max(10px,env(safe-area-inset-bottom))}
-.float-btn{width:100%;border:无;border-radius:16px;填充:13px;font-size:14.5px;font-weight:900;cursor:pointer;color：#fff；box-shadow:0 5px 16px RGBA(255,140,0,.3);transition:改变 .15s;位置:relative;overflow:hidden;background:线性梯度(135deg,#FF9F1C,#FF5A00)}
-.float-btn::在……之后{内容:'';位置:absolute;顶端:0;left:-100%;width:50%;height:100%;background:线性梯度(90deg,transparent,RGBA(255,255,255,.22),transparent);改变:skewX(-20deg);animation:shineBtn 3.5s infinite}
+.float-bar{position:fixed;bottom:0;left:0;right:0;z-index:100;background:var(--float);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:10px 14px max(10px,env(safe-area-inset-bottom))}
+.float-btn{width:100%;border:none;border-radius:16px;padding:13px;font-size:14.5px;font-weight:900;cursor:pointer;color:#fff;box-shadow:0 5px 16px rgba(255,140,0,.3);transition:transform .15s;position:relative;overflow:hidden;background:linear-gradient(135deg,#FF9F1C,#FF5A00)}
+.float-btn::after{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-20deg);animation:shineBtn 3.5s infinite}
 @keyframes shineBtn{0%,60%{left:-100%}100%{left:200%}}
-.float-btn:活跃的{改变:translateY(2px) 规模(.98)}
-.float-btn.完成{background:线性梯度(135deg,#5FD97A,#279E3F);color：#fff}
-.到顶{位置:已修复;正确的:14PX;底部:calc(70px + env(safe-area-inset-bottom));z-index:99;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:17px;cursor:pointer;box-shadow:0 4px 14px var(--sh);不透明度:0;指针事件:无;改变:translateY(8px) scale(.88);transition:all .25s}
-.到顶.显示{不透明度:1;指针事件:自动;改变:translateY(0) scale(1)}
-.顶级的{位置:已修复;顶端:-60PX;left:50%;改变:translateX(-50%);z-index:9999;background:线性梯度(135deg,RGBA(40,18,0,.94),RGBA(90,40,0,.94));color：#fff；font-size:13PX;font-weight:700;填充:11PX 24PX;border-radius:0 0 16PX 16PX;white-space:nowrap;box-shadow:0 5PX 18PX RGBA(0,0,0,.3);transition:顶端 .35s cubic-bezier(.4,0,.2,1)}
-.顶级的.显示{顶端:0}
-</风格>
-</头>
+.float-btn:active{transform:translateY(2px) scale(.98)}
+.float-btn.done{background:linear-gradient(135deg,#5FD97A,#279E3F);color:#fff}
+.to-top{position:fixed;right:14px;bottom:calc(70px + env(safe-area-inset-bottom));z-index:99;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:17px;cursor:pointer;box-shadow:0 4px 14px var(--sh);opacity:0;pointer-events:none;transform:translateY(8px) scale(.88);transition:all .25s}
+.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+.tip-top{position:fixed;top:-60px;left:50%;transform:translateX(-50%);z-index:9999;background:linear-gradient(135deg,rgba(40,18,0,.94),rgba(90,40,0,.94));color:#fff;font-size:13px;font-weight:700;padding:11px 24px;border-radius:0 0 16px 16px;white-space:nowrap;box-shadow:0 5px 18px rgba(0,0,0,.3);transition:top .35s cubic-bezier(.4,0,.2,1)}
+.tip-top.show{top:0}
+</style>
+</head>
 <body>
 
-<其他 班级="tip-top" id="tipTop">✅ 链接已复制</其他>
+<div class="tip-top" id="tipTop">✅ 链接已复制</div>
 
-<其他 班级="hero">
-  <其他 班级="英雄本色">
-	<其他 班级="logo">🏮</其他>
+<div class="hero">
+  <div class="hero-inner">
+	<div class="logo">🏮</div>
 	<h1><span>神 券 阁</span></h1>
 	<p>外卖红包 · 到店优惠 · 电影特价 · 打车立减</p>
-	<其他 班级="benefit-wrap"><span 班级="福利文本" id="benefitText">🔥 今日红包已更新 · 最高可领 20 元</span></其他>
-	<其他 班级="链接栏">
-	  <span 班级="link-bar-url" id="showUrl"></span>
-	  <button 班级="link-bar-btn" onclick="doCopy(这)">复制</button>
-	</其他>
-  </其他>
-</其他>
+	<div class="benefit-wrap"><span class="benefit-text" id="benefitText">🔥 今日红包已更新 · 最高可领 20 元</span></div>
+	<div class="link-bar">
+	  <span class="link-bar-url" id="showUrl"></span>
+	  <button class="link-bar-btn" onclick="doCopy(this)">复制</button>
+	</div>
+  </div>
+</div>
 
-<其他 班级="tip-bar">🔥 全部官方入口 · 天天可领 · 下单直接减</其他>
+<div class="tip-bar">🔥 全部官方入口 · 天天可领 · 下单直接减</div>
 
-<其他 班级="page" id="page"></其他>
+<div class="page" id="page"></div>
 
-<button 班级="到顶" id="toTop" onclick="scrollTo({top:0，行为：'smooth'})">↑</button>
+<button class="to-top" id="toTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<其他 班级="float-bar">
-  <button 班级="float-btn" onclick="doCopy(这)">📋 复制本站链接</button>
-</其他>
+<div class="float-bar">
+  <button class="float-btn" onclick="doCopy(this)">📋 复制本站链接</button>
+</div>
 
-<脚本>
+<script>
 /* ===== 配置 + 入口数据合并在一起 ===== */
-Const/* ===== 配置 + 入口数据合并在一起 ===== */Const 'http://tbm20.cn'section：'http://tbm20.cn';='http://tbm20.cn';
-Const MT_CODE='1来美团，吃得更好，生活更好❤️复制整条信息，打开👉美团👈 http:/💰ssYzFlOTAyY2U💰'; MT_CODE='1来美团，吃得更好，生活更好❤️复制整条信息，打开👉美团👈 http:/💰ssYzFlOTAyY2U💰';
-Const TB_CODE='￥xEes6TDQdPq￥/ HU7405'; TB_CODE='￥xEes6TDQdPq￥/ HU7405';
+const SITE='http://tbm20.cn';
+const MT_CODE='1来美团，吃得更好，生活更好❤️复制整条信息，打开👉美团👈 http:/💰ssYzFlOTAyY2U💰';
+const TB_CODE='￥xEes6TDQdPq￥/ HU7405';
 
-Const 数据=[ 数据=[
-  {section:'🟠外卖红包',品牌:'#FF6A00',项目:[{section:'🟠外卖红包',品牌:'#FF6A00',项目:[
-{文本：'淘宝闪购大红包'，潜水艇：'官方入口·天天可领'，图标：'🛒'，CLS：'b-tb'，热的：'🔥最热',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=9249&slk_force_set_request=true&scene=79c3e86933ac4ac6bc1fba486c241ddb'},{文本:'淘宝闪购大红包',sub:'官方入口 · 天天可领',图标:'🛒',CLS:'b-tb',热的:'🔥最热',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=9249&slk_force_set_request=true&scene=79c3e86933ac4ac6bc1fba486c241ddb'},
-{文本:'美团外卖大红包',sub:'点击复制口令,打开美团领取',图标:'',CLS:'b-mt',复制:true,code:MT_CODE},{文本:'美团外卖大红包',sub:'点击复制口令，打开美团领取',图标:'🍔',CLS:'b-mt',复制:true,code:MT_CODE},
-	{文本:'淘宝外卖红包口令',sub:'点击复制口令，打开淘宝领取',图标:'🛍️',CLS:'b-tb-copy',复制:true,code:TB_CODE},{文本:'淘宝外卖红包口令',sub:'点击复制口令，打开淘宝领取',图标:'🛍️',CLS:'b-tb-copy',复制:true,code:TB_CODE},
-{文本：'淘宝闪购夜宵专享会场'，潜水艇：'夜宵党专属·越夜越便宜'，图标:'🍢',CLS:'b-ele',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8706&slk_force_set_request=true&alsc_exsrc=ES0007485972&scene=a322445b6f6f4252915b185ded0810d7'},{文本:'淘宝闪购夜宵专享会场',sub:'夜宵党专属 · 越夜越便宜',图标:'🍢',CLS:'b-ele',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8706&slk_force_set_request=true&alsc_exsrc=ES0007485972&scene=a322445b6f6f4252915b185ded0810d7'},
-{文本：'淘宝叠加神券'，潜水艇：'可与红包共用·省'，图标:'🧧',CLS:'b-dp',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8339&slk_force_set_request=true&tfPos=h5&alsc_exsrc=ES0007076172&scene=bb92343302724bb097cf7aac62123654'},{文本:'淘宝叠加神券',sub:'可与红包同用 · 更省',图标:'🧧',CLS:'b-dp',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8339&slk_force_set_request=true&tfPos=h5&alsc_exsrc=ES0007076172&scene=bb92343302724bb097cf7aac62123654'},
-	{文本:'美团外卖大额券',sub:'满减通用 · 秒到账',图标:'🎫',CLS:'b-mtr',url:'http://dpurl.cn/4m2sxtSz'},
+const DATA=[
+  {section:'🟠 外卖红包',brand:'#FF6A00',items:[
+	{text:'淘宝闪购大红包',sub:'官方入口 · 天天可领',icon:'🛒',cls:'b-tb',hot:'🔥最热',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=9249&slk_force_set_request=true&scene=79c3e86933ac4ac6bc1fba486c241ddb'},
+	{text:'美团外卖大红包',sub:'点击复制口令，打开美团领取',icon:'🍔',cls:'b-mt',copy:true,code:MT_CODE},
+	{text:'淘宝外卖红包口令',sub:'点击复制口令，打开淘宝领取',icon:'🛍️',cls:'b-tb-copy',copy:true,code:TB_CODE},
+	{text:'淘宝闪购夜宵专享会场',sub:'夜宵党专属 · 越夜越便宜',icon:'🍢',cls:'b-ele',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8706&slk_force_set_request=true&alsc_exsrc=ES0007485972&scene=a322445b6f6f4252915b185ded0810d7'},
+	{text:'淘宝叠加神券',sub:'可与红包同用 · 更省',icon:'🧧',cls:'b-dp',url:'https://market.m.taobao.com/app/starlink/wakeup-transit/pages/download?star_id=8339&slk_force_set_request=true&tfPos=h5&alsc_exsrc=ES0007076172&scene=bb92343302724bb097cf7aac62123654'},
+	{text:'美团外卖大额券',sub:'满减通用 · 秒到账',icon:'🎫',cls:'b-mtr',url:'http://dpurl.cn/4m2sxtSz'},
   ]},
-  {section:'🏨 到店优惠',品牌:'#FA541C',项目:[
-{文本：'酒店集合页'，潜水艇：'订房立减·新客更优惠'，图标：'🏨'，CLS：'B-Hotel'，url：'https://h5.sichuanyunzhan.com/node/entry/Nzv4Gz?templateType=system&entryType=middle&pid=39c606e4ad2b9f9557c0&t=1795315423'}，
-	{文本:'美团闪购集合页',sub:'超市生鲜红包 · 即时送达',图标:'⚡',CLS:'b-flash',url:'https://h5.sichuanyunzhan.com/node/entry/x4dXB2?templateType=system&entryType=middle&pid=39c606e4ad2b9f9557c0&t=1795574827'},
+  {section:'🏨 到店优惠',brand:'#FA541C',items:[
+	{text:'酒店集合页',sub:'订房立减 · 新客更优惠',icon:'🏨',cls:'b-hotel',url:'https://h5.sichuanyunzhan.com/node/entry/Nzv4Gz?templateType=system&entryType=middle&pid=39c606e4ad2b9f9557c0&t=1795315423'},
+	{text:'美团闪购集合页',sub:'超市生鲜红包 · 即时送达',icon:'⚡',cls:'b-flash',url:'https://h5.sichuanyunzhan.com/node/entry/x4dXB2?templateType=system&entryType=middle&pid=39c606e4ad2b9f9557c0&t=1795574827'},
   ]},
-{section：'🎬 电影特价'，品牌：'#C46BFF'，项目：[section：'🎬 电影特价'，品牌：'#C46BFF'，项目：[
-	{文本:'电影特价票',sub:'周二周三半价 · 提前买更便宜',图标:'🎬',CLS:'b-my',网址:'https://1.yoourl.com/link/10000716b026dbf8db9b1000BAY4Tr8X'},
+  {section:'🎬 电影特价',brand:'#C46BFF',items:[
+	{text:'电影特价票',sub:'周二周三半价 · 提前买更便宜',icon:'🎬',cls:'b-my',url:'https://1.yoourl.com/link/10000716b026dbf8db9b1000BAY4Tr8X'},
   ]},
-{section：'🚗 打车立减'，品牌：'#00B8C4'，项目：[section：'🚗 打车立减'，品牌：'#00B8C4'，项目：[
-{文本：'打车集合页'，潜水艇：'聚合补贴·通勤天天能用'，图标：'🚕'，CLS：'b-dd'，网址：'https://h5.sichuanyunzhan.com/node/entry/NBol8y?templateType=system&entryType=middle&pid=39c606e4ad2b9f9557c0&t=1795574954'}，文本：'打车集合页'，潜水艇：'聚合补贴·通勤天天能用'，图标：功能showTip，CLS：，CLS，网址：'https://h5.sichuanyunzhan.com/node/entry/NBol8y?templateType=system&entryType=middle&pid=39c606e4ad2b9f9557c0&t=1795574954'}，
+  {section:'🚗 打车立减',brand:'#00B8C4',items:[
+	{text:'打车集合页',sub:'聚合补贴 · 通勤天天能用',icon:'🚕',cls:'b-dd',url:'https://h5.sichuanyunzhan.com/node/entry/NBol8y?templateType=system&entryType=middle&pid=39c606e4ad2b9f9557c0&t=1795574954'},
   ]},
 ];
 /* ===================================== */
 
-功能 ESC(s){返回 线(s??'').replace(/&/g,'&amp;取代一个g&quot;')取代一个g(/'/g，'&#39;').替换(/</g,'&lt;替换g的时间&gt;')}
-文档.getElementById('showUrl').textContent=SITE。取代(/^https?:\/\//,'');.getElementById('showUrl')。textContent=SITE。取代(/^https?:\/\//,'');
+function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+document.getElementById('showUrl').textContent=SITE.replace(/^https?:\/\//,'');
 
-ConstBENEFITS=['🔥 今日红包已更新 · 最高可领 20 元','💰 先领券再下单 · 立减不排队','🛒 淘宝红包天天领 · 叠加更划算','🎁 外卖 / 到店 / 电影 / 打车 一站全搞定','📋 复制本站链接 · 喊朋友一起省'];
-让 bIdx=0,bEl=文档.getElementById('benefitText');
-如果(！窗户.matchMedia('(preferres-reduce-motion:reduce)')。matches){(！窗户.matchMedia('(preferres-reduce-motion:reduce)')。matches){
-  setInterval(()=>{贝尔.风格.不透明度='0';setTimeout(()=>{bIdx=(bIdx+1)%BENEFITS.length;贝尔.textContent=BENEFITS[bIdx];贝尔.风格.不透明度='1'},200)},3200);
+const BENEFITS=['🔥 今日红包已更新 · 最高可领 20 元','💰 先领券再下单 · 立减不排队','🛒 淘宝红包天天领 · 叠加更划算','🎁 外卖 / 到店 / 电影 / 打车 一站全搞定','📋 复制本站链接 · 喊朋友一起省'];
+let bIdx=0,bEl=document.getElementById('benefitText');
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  setInterval(()=>{bEl.style.opacity='0';setTimeout(()=>{bIdx=(bIdx+1)%BENEFITS.length;bEl.textContent=BENEFITS[bIdx];bEl.style.opacity='1'},200)},3200);
 }
-功能 振动(p){如果(领航员.振动)领航员.振动(p)}
-功能showTip(米){Constt=文档.getElementById('tiptop');t.textContent=米；t.classList.添加('show');setTimeout(()=>t.classList.移除'show'),2200) }(米){Constt=句子档.getElementById档.getElementById('tiptop')；t.textContent=米；t.classList。添加('show')；setTimeout(()=>t.classList.移除('show'),2200)}
-功能 FB(文本,完成){
-  Const我=文档.createElement('输入');我.价值=文本;我.风格.cssText='position:fixed;left:-9999px;opacity:0';
-  文档.body.appendChild(我);我.选择();我.setSelectionRange(0,99999);
-  尝试{文档.execCommand('复制');完成()}赶上(e){showTip('❌ 复制失败')}
-  文档.body.removeChild(我);
+function vibrate(p){if(navigator.vibrate)navigator.vibrate(p)}
+function showTip(m){const t=document.getElementById('tipTop');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+function fb(text,done){
+  const i=document.createElement('input');i.value=text;i.style.cssText='position:fixed;left:-9999px;opacity:0';
+  document.body.appendChild(i);i.select();i.setSelectionRange(0,99999);
+  try{document.execCommand('copy');done()}catch(e){showTip('❌ 复制失败')}
+  document.body.removeChild(i);
 }
-功能 写(文本,完成){如果(领航员.剪贴板&&位置信息.protocol==='https:'){领航员.剪贴板.writeText(文本).然后(完成).赶上(()=>FB(文本,完成))}else{FB(文本,完成)}}
-功能 doCopy(BTN){
-写入(站点，()=>{写(网站,()=>{
-	showTip('✅ 链接已复制，快发给朋友吧');振动([40]);showTip('✅ 链接已复制，快发给朋友吧');振动([40]);
-	if(!BTN)返回;Const o=BTN.innerHTML;BTN.classList.添加('已完成');BTN.innerHTML='✅ 已复制';if(!BTN)返回;Const o=BTN.innerHTML;BTN.classList.添加('已完成');BTN.innerHTML='✅ 已复制';
-	setTimeout(()=>{BTN.classList.移除('已完成');BTN.innerHTML=o},2000);
+function write(text,done){if(navigator.clipboard&&location.protocol==='https:'){navigator.clipboard.writeText(text).then(done).catch(()=>fb(text,done))}else{fb(text,done)}}
+function doCopy(btn){
+  write(SITE,()=>{
+	showTip('✅ 链接已复制，快发给朋友吧');vibrate([40]);
+	if(!btn)return;const o=btn.innerHTML;btn.classList.add('done');btn.innerHTML='✅ 已复制';
+	setTimeout(()=>{btn.classList.remove('done');btn.innerHTML=o},2000);
   });
 }
-功能 copyCodeCard(el,code,姓名){
-  if(!code||code.indexOf('替换为')===0){showTip('⚠️ 口令还没填');返回}
-  写(code,()=>{
-	showTip('✅ '+姓名+'口令已复制，打开 App 即可领取');振动([40]);
-	Const ov=文档.createElement('div');
-	ov.风格.cssText='position:absolute;inset:0;background:linear-gradient(135deg,rgba(95,217,122,.95),rgba(39,158,63,.95));border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;z-index:20;animation:fade .2s';
-	ov.innerHTML='<其他 风格="font-size:24px">✅</其他><其他 风格="font-weight:900;font-size:15px;margin-top:4px">已复制</其他><其他 风格="font-size:11px;不透明度:.9;margin-top:2px">'+ESC(姓名)+'</其他>';
+function copyCodeCard(el,code,name){
+  if(!code||code.indexOf('替换为')===0){showTip('⚠️ 口令还没填');return}
+  write(code,()=>{
+	showTip('✅ '+name+'口令已复制，打开 App 即可领取');vibrate([40]);
+	const ov=document.createElement('div');
+	ov.style.cssText='position:absolute;inset:0;background:linear-gradient(135deg,rgba(95,217,122,.95),rgba(39,158,63,.95));border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;z-index:20;animation:fade .2s';
+	ov.innerHTML='<div style="font-size:24px">✅</div><div style="font-weight:900;font-size:15px;margin-top:4px">已复制</div><div style="font-size:11px;opacity:.9;margin-top:2px">'+esc(name)+'</div>';
 	el.appendChild(ov);
 	setTimeout(()=>{if(ov.parentNode)ov.parentNode.removeChild(ov)},2000);
   });
 }
-函数go(el，url，name){
-  if(!url){showTip('⚠️ 链接未配置');返回}
-  文档.getElementById('showUrl').textContent=姓名+' · '+url.replace(/^https?:\/\//,'').slice(0,32);
-  el.classList.添加('opening');vibrate(20);
+function go(el,url,name){
+  if(!url){showTip('⚠️ 链接未配置');return}
+  document.getElementById('showUrl').textContent=name+' · '+url.replace(/^https?:\/\//,'').slice(0,32);
+  el.classList.add('opening');vibrate(20);
   setTimeout(()=>{
-	尝试{Const一个=文档.createElement(‘A’);一个.href=网址;一个.target='_blank';一个.rel='noopener noreferrer';文档.body.appendChild(一个);一个.click();文档.body.removeChild(一个)}
-	赶上(e){窗户.位置信息.href=网址}
+	try{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';document.body.appendChild(a);a.click();document.body.removeChild(a)}
+	catch(e){window.location.href=url}
   },240);
 }
-窗户.addEventListener('滚动',()=>{文档.getElementById('toTop').classList.toggle('show',窗户.scrollY>300)},{passive:true});
+window.addEventListener('scroll',()=>{document.getElementById('toTop').classList.toggle('show',window.scrollY>300)},{passive:true});
 
-让 h='';
-数据.foreach(d=>{
-  h+='<div class="section"style="--品牌：'+d.brand+'"><div class="section-title"><div class="section-dot"><i></i></div><div class="section-name">'+d.section+'</div><div class="section-line"></div></div>';
-  d.项目.foreach(我=>{
-	Const徽章=我.热的?'<span class="badge-hot">'+我.热的+'</span>':'';
-	让 OC="event.preventDefault()；go(此，'"+ESC(我.URL)+"','"+ESC(我.text)+"')",ha=ESC(我.URL)||'javascript:void(0)',欧共体='';
-	如果(我.复制){
-	  欧共体='复制卡';
-	  OC="event.preventDefault()；copyCodeCard(此，'"+ESC(我.code)+"','"+ESC(我.text)+"')";ha='javascript:void(0)';
+let h='';
+DATA.forEach(d=>{
+  h+='<div class="section" style="--brand:'+d.brand+'"><div class="section-title"><div class="section-dot"><i></i></div><div class="section-name">'+d.section+'</div><div class="section-line"></div></div>';
+  d.items.forEach(i=>{
+	const badge=i.hot?'<span class="badge-hot">'+i.hot+'</span>':'';
+	let oc="event.preventDefault();go(this,'"+esc(i.url)+"','"+esc(i.text)+"')",ha=esc(i.url)||'javascript:void(0)',ec='';
+	if(i.copy){
+	  ec='copy-card';
+	  oc="event.preventDefault();copyCodeCard(this,'"+esc(i.code)+"','"+esc(i.text)+"')";ha='javascript:void(0)';
 	}
-	h+='<a class="cps-btn'+我.CLS+' '+欧共体+'" href="'+ha+'" onclick="'+OC+'">'
-	  +(我.图标?'<div class="cps-l"><div class="cps-icon">'+我.图标+'</div><div class="cps-text">'+我.text+'<small>'+我.sub+'</small></div></div>':'<div class="cps-l"><div class="cps-text">'+我.text+'<small>'+我.sub+'</small></div></div>')
-	  +'<div class="cps-right">'+徽章+(我.复制?'<span class="cps-dot"></span>':'')+'<div class="cps-arr">›</div></div></a>';
+	h+='<a class="cps-btn '+i.cls+' '+ec+'" href="'+ha+'" onclick="'+oc+'">'
+	  +(i.icon?'<div class="cps-l"><div class="cps-icon">'+i.icon+'</div><div class="cps-text">'+i.text+'<small>'+i.sub+'</small></div></div>':'<div class="cps-l"><div class="cps-text">'+i.text+'<small>'+i.sub+'</small></div></div>')
+	  +'<div class="cps-right">'+badge+(i.copy?'<span class="cps-dot"></span>':'')+'<div class="cps-arr">›</div></div></a>';
   });
   h+='</div>';
 });
-h+='<div class="notice"><div class="notice-title">💡 省钱小贴士</div><ul><li><b>外卖</b>：先领券再下单，平台券+商家满减+支付优惠可同享</li><li><b>电影票</b>：周二周三多为半价日，提前1小时买更便宜</li><li><b>打车</b>：高峰前领券，周末平台补贴力度更大</li><li><b>红包</b>：大部分券当天有效，别放过期了</li></ul></div><div style="height:12px"></div>';
-文档.getElementById('页面').innerHTML=h;
-</脚本>
+h+='<div class="notice"><div class="notice-title">💡 省钱小贴士</div><ul><li><b>外卖</b>：先领券再下单，平台券 + 商家满减 + 支付优惠可同享</li><li><b>电影票</b>：周二周三多为半价日，提前 1 小时买更便宜</li><li><b>打车</b>：高峰前领券，周末平台补贴力度更大</li><li><b>红包</b>：大部分券当天有效，别放过期了</li></ul></div><div style="height:12px"></div>';
+document.getElementById('page').innerHTML=h;
+</script>
 </body>
-</超文本标记语言>
+</html>
